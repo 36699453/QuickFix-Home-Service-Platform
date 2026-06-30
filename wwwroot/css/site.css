@@ -1,0 +1,190 @@
+/* ==========================================================
+   QuickFix - Glass Professional Theme
+   Author : Harshvardhan Mohite
+   ========================================================== */
+
+/* ---------- Global ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width:768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    font-family: "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    background: linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)), url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #212529;
+}
+
+/* ---------- Layout ---------- */
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+    background: rgba(255,255,255,.18) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,.25);
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.navbar-brand {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff !important;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 600;
+    transition: .3s;
+}
+
+    .nav-link:hover {
+        color: #ffd54f !important;
+    }
+
+/* ---------- Cards ---------- */
+
+.card {
+    background: rgba(255,255,255,.22);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,.30);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    transition: .35s;
+}
+
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 40px rgba(0,0,0,.30);
+    }
+
+/* ---------- Card Header ---------- */
+
+.card-header {
+    border: none;
+    border-radius: 20px 20px 0 0 !important;
+    font-weight: bold;
+}
+
+/* ---------- Forms ---------- */
+
+.form-control,
+.form-select {
+    background: rgba(255,255,255,.90);
+    border: none;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+textarea {
+    background: rgba(255,255,255,.90) !important;
+    border: none !important;
+    border-radius: 12px !important;
+}
+
+.form-control:focus,
+.form-select:focus {
+    box-shadow: 0 0 0 .2rem rgba(13,110,253,.25);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+    border-radius: 12px;
+    font-weight: 600;
+    transition: .25s;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+/* ---------- Tables ---------- */
+
+.table {
+    background: rgba(255,255,255,.92);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+    .table thead {
+        background: #0d6efd;
+        color: white;
+    }
+
+    .table td {
+        vertical-align: middle;
+    }
+
+/* ---------- Validation ---------- */
+
+.text-danger {
+    color: #ffdddd !important;
+    font-size: .9rem;
+}
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+/* ---------- Utility ---------- */
+
+.shadow-custom {
+    box-shadow: 0 15px 30px rgba(0,0,0,.20);
+}
+
+/* ---------- Scrollbar ---------- */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d6efd;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #efefef;
+}
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+/* .footer{
+    ...
+} */

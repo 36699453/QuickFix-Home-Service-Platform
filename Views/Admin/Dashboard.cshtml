@@ -1,0 +1,100 @@
+﻿@model QuickFix.web.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-4">
+
+    <h2 class="mb-4 fw-bold text-primary">
+        📊 Admin Dashboard
+    </h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5>Total Users</h5>
+                    <h2 class="text-primary">
+                        @Model.TotalUsers
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5>Total Services</h5>
+                    <h2 class="text-success">
+                        @Model.TotalServices
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card text-center shadow">
+                <div class="card-body">
+                    <h5>Total Bookings</h5>
+                    <h2 class="text-danger">
+                        @Model.TotalBookings
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="card mt-4 shadow">
+
+        <div class="card-header bg-dark text-white">
+
+            Recent Bookings
+
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-striped">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Date</th>
+                        <th>Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model.RecentBookings)
+                    {
+                        <tr>
+
+                            <td>@item.CustomerName</td>
+
+                            <td>@item.Phone</td>
+
+                            <td>@item.BookingDate.ToShortDateString()</td>
+
+                            <td>@item.Status</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

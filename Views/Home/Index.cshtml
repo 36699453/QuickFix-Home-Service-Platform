@@ -1,0 +1,146 @@
+﻿@model List<QuickFix.web.Models.Service>
+
+@{
+    ViewData["Title"] = "QuickFix";
+}
+
+<div class="container mt-5">
+
+    <!-- Hero Section -->
+    <div class="text-center mb-5">
+
+        <h1 class="display-3 fw-bold text-primary">
+            🛠 QuickFix
+        </h1>
+
+        <p class="lead text-secondary">
+            Book Trusted Home Services in Minutes
+        </p>
+
+        <div class="row justify-content-center mt-4">
+
+            <div class="col-md-6">
+
+                <input type="text"
+                       id="searchBox"
+                       class="form-control form-control-lg"
+                       placeholder="🔍 Search Services..." />
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Categories -->
+
+    <h3 class="mb-4">
+        Categories
+    </h3>
+
+    <div class="row text-center mb-5">
+
+        <div class="col">
+            <div class="card shadow-sm p-3">
+                🪠
+                <h5>Plumber</h5>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card shadow-sm p-3">
+                💡
+                <h5>Electrician</h5>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card shadow-sm p-3">
+                🎨
+                <h5>Painter</h5>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card shadow-sm p-3">
+                🧹
+                <h5>Cleaner</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Services -->
+
+    <h2 class="mb-4">
+        Popular Services
+    </h2>
+
+    <div class="row">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-6 mb-4 service-card">
+
+                <div class="card shadow border-0 rounded-4">
+
+                    <div class="card-body">
+
+                        <h3 class="service-name">
+                            @item.ServiceName
+                        </h3>
+
+                        <p class="text-muted">
+                            @item.Description
+                        </p>
+
+                        <h3 class="text-success">
+                            ₹ @item.Price
+                        </h3>
+
+                        <a asp-controller="Booking"
+                           asp-action="Create"
+                           class="btn btn-primary w-100">
+
+                            Book Now
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        }
+
+    </div>
+
+</div>
+@section Scripts {
+
+    <script>
+
+        document.getElementById("searchBox")
+        .addEventListener("keyup", function () {
+
+            let value = this.value.toLowerCase();
+
+            let cards = document.querySelectorAll(".service-card");
+
+            cards.forEach(function(card){
+
+                let name = card.querySelector(".service-name")
+                               .innerText
+                               .toLowerCase();
+
+                if(name.includes(value))
+                    card.style.display="block";
+                else
+                    card.style.display="none";
+
+            });
+
+        });
+
+    </script>
+
+}
