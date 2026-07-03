@@ -1,4 +1,4 @@
-# 🛠 QuickFix - Smart Home Service Platform
+#  QuickFix - Smart Home Service Platform
 
 ##  Overview
 
