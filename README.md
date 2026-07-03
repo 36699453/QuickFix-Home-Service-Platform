@@ -1,6 +1,6 @@
 # 🛠 QuickFix - Smart Home Service Platform
 
-## 📖 Overview
+##  Overview
 
 QuickFix is a professional ASP.NET Core MVC web application that allows customers to book trusted home services online.
 
@@ -8,7 +8,7 @@ The project demonstrates enterprise-level backend development using ASP.NET Core
 
 ---
 
-# 🚀 Features
+#  Features
 
 - User Registration
 - User Login
@@ -22,7 +22,7 @@ The project demonstrates enterprise-level backend development using ASP.NET Core
 
 ---
 
-# 🛠 Technologies
+#  Technologies
 
 - ASP.NET Core MVC
 - C#
@@ -36,7 +36,7 @@ The project demonstrates enterprise-level backend development using ASP.NET Core
 
 ---
 
-# 📂 Project Structure
+#  Project Structure
 
 Controllers/
 Models/
@@ -49,13 +49,13 @@ wwwroot/
 
 ---
 
-# 📸 Screenshots
+#  Screenshots
 
 Coming Soon
 
 ---
 
-# 👨‍💻 Developer
+#  Developer
 
 Harshvardhan Mohite
 
